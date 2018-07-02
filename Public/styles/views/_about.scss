@@ -1,0 +1,126 @@
+.body-about-large {
+  @include flexSetUp(center, center);
+  @include width-height(100%, 100%);
+  margin: auto;
+  flex-direction: row;
+
+  .innerBox {
+    @include flexSetUp(center, center);
+    @include width-height(90%, 80%);
+
+  .left {
+     width: 30%;
+     height: auto;
+     @include flexSetUp(center, center);
+     overflow: hidden;
+     box-shadow: -5px 4px 5px #0f0f0f;
+     img {
+        width: 100%;
+        height: auto;
+     }
+  }
+  .right {
+     margin-left: 5%;
+     padding: 1%;
+     width: 70%;
+     height: auto;
+     background-color: rgba(68, 68, 68, 0.7);
+     border-radius: 10px;
+     border: 2px rgb(68, 68, 68) solid;
+     font-size: 4.5vh;
+     line-height: 4.7vh;
+
+        .top {
+           font-family: $body;
+           text-indent: 30px;
+          //  margin-bottom: 5vh;
+           width: auto;
+        }
+
+        .bottom {
+           @include flexSetUp(center, center);
+           flex-direction: column;
+           font-size: 4.5vh;
+           font-family: $body;
+
+           ul {
+              @include flexSetUp();
+              flex-direction: column;
+              line-height: 5.3vh;
+              white-space: nowrap;
+           }
+           h4 {
+              margin: auto;
+              font-size: 7vh;
+              margin-bottom: 15px;
+              font-weight: bold;
+           }
+        }
+     }
+  }
+}
+
+@media screen and (max-width: 1400px) and (orientation: portrait) {
+  .body-about-large {
+    @include flexSetUp(center, center);
+    @include width-height(100%, 100%);
+    margin: auto;
+
+    .innerBox {
+      @include flexSetUp(center, center);
+      @include width-height(90%, 95%);
+      flex-direction: column-reverse;
+
+    .left {
+       width: auto;
+       height: 35%;
+       @include flexSetUp(center, center);
+       overflow: hidden;
+       box-shadow: -5px 4px 5px #0f0f0f;
+       margin-top: 2vh;
+       img {
+          width: auto;
+          height: 100%;
+       }
+    }
+    .right {
+       padding: 1%;
+       width: auto;
+       height: auto;
+       background-color: rgba(68, 68, 68, 0.7);
+       border-radius: 10px;
+       border: 2px rgb(68, 68, 68) solid;
+       font-size: 4.5vw;
+       line-height: 4.7vw;
+       margin-left: 0;
+
+          .top {
+             font-family: $body;
+             text-indent: 30px;
+            //  margin-bottom: 5vh;
+             width: auto;
+          }
+
+          .bottom {
+             @include flexSetUp(center, center);
+             flex-direction: column;
+             font-size: 4.5vw;
+             font-family: $body;
+
+             ul {
+                @include flexSetUp();
+                flex-direction: column;
+                line-height: 5.3vw;
+                white-space: nowrap;
+             }
+             h4 {
+                margin: auto;
+                font-size: 7vw;
+                margin-bottom: 15px;
+                font-weight: bold;
+             }
+          }
+       }
+    }
+  }
+}

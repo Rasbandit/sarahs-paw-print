@@ -1,0 +1,38 @@
+@font-face {
+   font-family: 'minimal';
+   src: url('./fonts/Minimal.ttf') format('truetype');
+}
+
+@font-face {
+   font-family: 'goodBye';
+   src: url('./fonts/KGWaystoSayGoodbye.ttf') format('truetype');
+}
+
+@font-face {
+   font-family: 'sep';
+   src: url('./fonts/September Mornings.ttf') format('truetype');
+}
+
+@font-face {
+   font-family: 'sketch';
+   src: url('./fonts/SketchedAlphabet.ttf') format('truetype');
+}
+
+@font-face {
+   font-family: 'dragon';
+   src: url('./fonts/Dragon is coming.otf') format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css?family=Bad+Script|Dancing+Script|Droid+Sans|Farsan|Fira+Sans+Condensed|Lobster|Montserrat|Oswald|Playball');
+
+$header-text: #fff;
+$header-footer: #26292E;
+$background: #2F3238;
+
+$text-gray: #666666;
+$text-hover: #00CED1;
+$text-white: green;
+
+$header: 'sep', cursive;
+$body: 'minimal';
+$imgTitles: 'sketch'; //apply me later

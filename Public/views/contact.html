@@ -1,0 +1,22 @@
+<form ng-submit="submit()">
+   <div class="disabled" ng-if='sending === true'></div>
+   <legend>Contact Me</legend>
+   <h2>sarahgreggart@gmail.com</h2>
+   <p>Please Allow 24 business hours for a response.</p>
+   <div class="top-row">
+      <div class="column">
+          <input type="text" class="padded" name="name" ng-model="email.name" ng-required="true" placeholder="Name">
+       </div>
+       <div class="column">
+       <input type="email" name="mail" class="padded" ng-model="email.email" ng-required="true" placeholder="E-Mail">
+       </div>
+   </div>
+   <div class="middle-row">
+       <textarea type="text" ng-model="email.text" ng-required="true"><br><br>
+   </div>
+   <div class="bottom-row">
+      <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple file-model="email.attachment" accept="image/*" />
+      <label for="file"><span>{{fileName}}</span></label>
+      <input class="btn" type="submit">
+   </div>
+</form>

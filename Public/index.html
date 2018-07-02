@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="sarApp">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Sarah Gregg</title>
+      <link rel="stylesheet" href="./bundle.min.css" media="screen" title="no title">
+      <link rel="icon" href="./pictures/Logo.png">
+      <link rel="stylesheet" type="text/css" href="./swal/sweetalert.css">
+
+   </head>
+   <body ng-controller="mainCtrl">
+      <banner state=stateName></banner>
+
+      <!-- <div class="bg-img">
+      <img src="./pictures/588c4ba75cbd6dd9fe3c5bfafaaccdea.jpg" class="" alt="">
+      </div> -->
+
+      <section class="fill-large">
+      <main ui-view></ui-view>
+      </section>
+
+      <script type="text/javascript" src="//code.jquery.com/jquery-2.0.0.min.js">
+      </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-animate.min.js"></script>
+      <script src="wheelzoom.js"></script>
+      <script src="./bundle.min.js"></script>
+      <script src="./swal/sweetalert.min.js"></script>
+   </body>
+</html>

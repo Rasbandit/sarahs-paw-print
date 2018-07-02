@@ -1,0 +1,144 @@
+.home-small {
+   display: none;
+}
+
+.home-large {
+  @include width-height(85%, 60%);
+  margin: auto;
+  @include flexSetUp(flex-start, center);
+
+  .left {
+     width: 60%;
+     padding-right: 15px;
+     padding-left: 15px;
+
+     h1 {
+       font-size: 10vh;
+       font-family: 'Dancing Script', cursive;
+       text-align: center;
+       margin-bottom: 5vh;
+       white-space: nowrap;
+     }
+
+     p {
+        font-size: 4vh;
+        font-weight: lighter;
+        line-height: 5vh;
+     }
+
+     span {
+        font-size: 8vh;
+        font-family: 'Dancing Script', cursive;
+     }
+  }
+
+  p.viewport {
+    margin-left: 5%;
+     @include width-height(auto, 100%);
+     position: relative;
+     overflow: hidden;
+     @include flexSetUp(center, center);
+     box-shadow: -5px 4px 5px #0f0f0f;
+     border: none;
+  }
+  p.viewport img.fader {
+      display: none;
+      position: absolute;
+      margin: auto;
+      z-index: 2 ;
+      @include width-height(auto, 100%);
+      border: none;
+  }
+  p.viewport img.fader.show {
+      @include flexSetUp(center, center);
+      transition: opacity 2000ms ease ;
+      @include width-height(auto, 100%);
+  }
+  p.viewport img.fader.fadeOut {
+      opacity: 0 ;
+  }
+  p.viewport img.image {
+      @include flexSetUp(center, center);
+      @include width-height(auto, 100%);
+  }
+
+}
+
+@media screen and (max-width: 1400px) and (orientation: portrait) {
+
+  .home-large {
+    display: none;
+  }
+
+  .home-small {
+        @include width-height(100%, 90%);
+        margin: 0 auto;
+        @include flexSetUp(center, center);
+        flex-direction: column;
+
+        h1 {
+          font-size: 7vh;
+          font-family: 'Dancing Script', cursive;
+          text-align: center;
+          margin-bottom: 5vh;
+        }
+
+        .bottom{
+           width: 85%;
+           margin-top: 20px;
+           padding-right: 15px;
+           padding-left: 15px;
+           p {
+              font-size: 3vh;
+              font-weight: lighter;
+              line-height: 3.5vh;
+              text-align: justify;
+           }
+           span {
+              font-size: 6vh;
+              font-family: 'Dancing Script', cursive;
+           }
+        }
+
+        p.viewport {
+          @include width-height(60%, auto);
+           position: relative;
+           overflow: hidden;
+           @include flexSetUp(center, center);
+           box-shadow: -5px 4px 5px #0f0f0f;
+        }
+        p.viewport img.fader {
+            display: none ;
+            position: absolute ;
+            margin: auto;
+            z-index: 2 ;
+            @include width-height(100%, auto);
+        }
+        p.viewport img.fader.show {
+            @include flexSetUp(center, center);
+            transition: opacity 2000ms ease ;
+        }
+        p.viewport img.fader.fadeOut {
+            opacity: 0 ;
+        }
+        p.viewport img.image {
+            @include flexSetUp(center, center);
+            @include width-height(100%, auto);
+        }
+        p.nav {
+            cursor: default ;
+            text-align: center ;
+            width: 80%;
+        }
+        p.nav a {
+            background-color: #FAFAFA ;
+            border: 1px solid #CCCCCC ;
+            border-radius: 3px 3px 3px 3px ;
+            color: #333333 ;
+            display: inline-block ;
+            padding: 4px 9px 2px 9px ;
+            text-decoration: none ;
+        }
+
+      }
+}

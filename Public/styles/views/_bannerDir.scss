@@ -1,0 +1,200 @@
+.banner {
+   @include width-height(100%, 10vh);
+   background-color: $header-footer;
+   @include flexSetUp(center, center);
+   flex-direction: row;
+   box-shadow: -4px 5px 7px #000;
+
+
+   ul {
+      margin-top: 10px;
+      font-size: 7vh;
+      width: 900px;
+      @include flexSetUp(space-between, center);
+      flex-direction: row;
+      font-family: $header;
+
+      .current {
+         color: $text-hover;
+         text-shadow: 2px 3px black;
+      }
+
+      a {
+         color: $text-gray;
+         text-decoration: none;
+         transition: all 0.4s;
+         text-shadow: 2px 3px black;
+      }
+
+      a:hover {
+         transform: scale(1.1);
+         text-shadow: 5px 6px black;
+         color: $text-hover;
+      }
+   }
+}
+
+.drop-down {
+   @include width-height(100%, auto);
+   max-height: 80vh;
+   background-color: rgba(47, 50, 56, 0.98);
+   @include flexSetUp(center, center);
+   position: fixed;
+   z-index: 1;
+   top: -100vh;
+   transition: 0.4s ease top;
+   box-shadow: -4px 5px 7px #000;
+
+   ul {
+      margin: 5vh 0;
+      font-size: 17vh;
+      width: 900px;
+      @include flexSetUp(space-between, center);
+      flex-direction: column;
+      font-weight: normal;
+      font-family: $header;
+
+      .current {
+         color: $text-hover;
+         text-shadow: 2px 3px black;
+      }
+
+      a {
+         color: $text-gray;
+         text-decoration: none;
+         transition: all 0.4s;
+         text-shadow: 2px 3px black;
+      }
+
+      a:hover {
+         transform: scale(1.1);
+         color: $text-hover;
+         text-shadow: 5px 6px black;
+      }
+   }
+}
+
+.filler {
+  display: none;
+  height: 5vh;
+}
+
+.small-drop-down-show {
+   top: 5vh;
+}
+
+.banner-small {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .filler {
+    display: block;
+  }
+  .banner-small {
+       @include width-height(100%, 10vh);
+       background-color: $header-footer;
+       @include flexSetUp(center, center);
+       flex-direction: row;
+       box-shadow: -2px 3px 5px #000;
+       z-index: 5;
+       position: fixed;
+       top: 0;
+       ul {
+          width: 90%;
+          height: 95%;
+          @include flexSetUp(space-between, center);
+          font-family: $header;
+
+          .current {
+             color: $text-hover;
+          }
+
+          img {
+             @include width-height(auto, 90%);
+          }
+
+          a {
+             color: $text-gray;
+             text-decoration: none;
+             transition: all 0.4s;
+             margin-top: -10px;
+             @include width-height(auto, 100%);
+             @include flexSetUp(center, center);
+             img {
+                @include width-height(auto, 70%);
+                margin-top: 10px;
+                cursor: pointer;
+             }
+          }
+
+          a:hover {
+             transform: scale(1.1);
+             color: $text-hover;
+          }
+       }
+    }
+  .banner {
+    display: none;
+  }
+  .small-drop-down-show {
+     top: 10vh;
+  }
+}
+
+
+@media screen and (orientation: portrait) {
+  .filler {
+    display: block;
+  }
+  .banner-small {
+       @include width-height(100%, 5vh);
+       background-color: $header-footer;
+       @include flexSetUp(center, center);
+       flex-direction: row;
+       box-shadow: -2px 3px 5px #000;
+       z-index: 5;
+       position: fixed;
+       top: 0;
+       ul {
+          width: 90%;
+          height: 95%;
+          @include flexSetUp(space-between, center);
+          font-family: $header;
+
+          .current {
+             color: $text-hover;
+          }
+
+          img {
+             @include width-height(auto, 90%);
+          }
+
+          a {
+             color: $text-gray;
+             text-decoration: none;
+             transition: all 0.4s;
+             margin-top: -10px;
+             @include width-height(auto, 100%);
+             @include flexSetUp(center, center);
+             img {
+                @include width-height(auto, 70%);
+                margin-top: 10px;
+                cursor: pointer;
+             }
+          }
+
+          a:hover {
+             transform: scale(1.1);
+             color: $text-hover;
+          }
+       }
+    }
+  .banner {
+    display: none;
+  }
+
+  .small-drop-down-show {
+     top: 5vh;
+  }
+}

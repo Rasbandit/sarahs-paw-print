@@ -1,0 +1,45 @@
+.body-login-large {
+   // @include flexSetUp(center, center);
+   @include width-height(900px, 100%);
+   margin-top: -100px;
+   margin: auto;
+   flex-direction: column;
+
+   h1 {
+      font-family: $header;
+      font-size: 45px;
+      font-weight: bolder;
+   }
+
+   form {
+      margin-top: 15px;
+      @include flexSetUp(center, center);
+      flex-direction: column;
+
+      input {
+         margin-bottom: 15px;
+         height: 20px;
+         width: 200px;
+      }
+
+      .btn {
+         font-family: $header;
+         font-size: 25px;
+         font-weight: bolder;
+         color: black;
+         background-color: #cccccc;
+         transition: all .3s ease;
+         display: inline-block;
+         border-radius: 5px;
+         border: 1px black solid;
+         width: 100px;
+         cursor: pointer;
+         height: 35px;
+         padding-bottom: 10px;
+      }
+
+      .btn:hover {
+         background-color: #8e8e8e;
+      }
+   }
+}

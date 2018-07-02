@@ -1,0 +1,28 @@
+<div class="banner">
+   <ul>
+      <a ui-sref="home" ng-class="{'current': state === 'home'}"><li>Home</li></a>
+      <a ui-sref="about" ng-class="{'current': state === 'about'}"><li>About/Pricing</li></a>
+      <a ui-sref="portrait" ng-class="{'current': state === 'portrait'}"><li>Pet Portraits</li></a>
+      <a ui-sref="other" ng-class="{'current': state === 'other'}"><li>Other Work</li></a>
+      <a ui-sref="contact" ng-class="{'current': state === 'contact'}"><li>Contact me</li></a>
+   </ul>
+</div>
+
+<div class="filler">
+
+</div>
+<div class="banner-small">
+   <ul>
+      <a ui-sref="home"><img src="./pictures/Logo.png" alt=""></a>
+      <img src="./pictures/hamburger-icon.png" alt="" ng-click="showMenu = !showMenu">
+   </ul>
+</div>
+<div class="drop-down" ng-class="{'small-drop-down-show': showMenu === true}">
+   <ul>
+      <a ui-sref="home" ng-class="{'current': state === 'home'}" ng-click="showMenu = !showMenu"><li>Home</li></a>
+      <a ui-sref="about" ng-class="{'current': state === 'about'}" ng-click="showMenu = !showMenu"><li>About/Pricing</li></a>
+      <a ui-sref="portrait" ng-class="{'current': state === 'portrait'}" ng-click="showMenu = !showMenu"><li>Pet Portraits</li></a>
+      <a ui-sref="other" ng-class="{'current': state === 'other'}" ng-click="showMenu = !showMenu"><li>Other Work</li></a>
+      <a ui-sref="contact" ng-class="{'current': state === 'contact'}" ng-click="showMenu = !showMenu"><li>Contact me</li></a>
+   </ul>
+</div>
