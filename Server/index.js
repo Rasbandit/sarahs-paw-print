@@ -7,7 +7,7 @@ const express = require('express'),
   multer = require('multer'),
   upload = multer(),
   dotenv = require('dotenv'),
-  port = 3000;
+  port = 3003;
 
 dotenv.load();
 
